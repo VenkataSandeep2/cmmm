@@ -28,7 +28,17 @@
     h2 {
       text-align: center;
       color: #b7410e;
-      margin-bottom: 25px;
+      margin-bottom: 20px;
+    }
+
+    .flash-message {
+      background-color: rgba(255, 0, 0, 0.1);
+      color: #b7410e;
+      padding: 10px;
+      border-radius: 10px;
+      text-align: center;
+      margin-bottom: 15px;
+      font-weight: bold;
     }
 
     input {
@@ -81,12 +91,23 @@
   </style>
 </head>
 <body>
-  <form class="signup-card" method="POST">
+  <form class="signup-card" method="POST" action="{{ url_for('signup') }}">
     <h2>Create Account</h2>
+
+    <!-- ✅ Flash Messages -->
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        {% for category, message in messages %}
+          <div class="flash-message">{{ message }}</div>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+
     <input type="text" name="name" placeholder="Full Name" required>
     <input type="email" name="email" placeholder="Email Address" required>
     <input type="password" name="password" placeholder="Password" required>
     <input type="password" name="confirm_password" placeholder="Confirm Password" required>
+
     <button type="submit">Sign Up</button>
 
     <div class="links">

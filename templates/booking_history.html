@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -96,34 +97,19 @@
     <h1 class="mb-4">📖 Your Booking History</h1>
 
     <div class="timeline">
-
-      <!-- Booking 1 -->
-      <div class="booking-card text-start">
-        <h3>Wedding Shoot 📸</h3>
-        <p><strong>Date:</strong> March 22, 2025</p>
-        <p><strong>Photographer:</strong> Ravi Sharma</p>
-        <p><strong>Location:</strong> Hyderabad</p>
-        <p><strong>Status:</strong> Completed</p>
-      </div>
-
-      <!-- Booking 2 -->
-      <div class="booking-card text-start">
-        <h3>Birthday Event 🎉</h3>
-        <p><strong>Date:</strong> April 10, 2025</p>
-        <p><strong>Photographer:</strong> Sneha Reddy</p>
-        <p><strong>Location:</strong> Vizag</p>
-        <p><strong>Status:</strong> Completed</p>
-      </div>
-
-      <!-- Booking 3 -->
-      <div class="booking-card text-start">
-        <h3>Wildlife Adventure 🐾</h3>
-        <p><strong>Date:</strong> May 15, 2025</p>
-        <p><strong>Photographer:</strong> Arjun Das</p>
-        <p><strong>Location:</strong> Nagarjuna Sagar</p>
-        <p><strong>Status:</strong> Upcoming</p>
-      </div>
-
+      {% if bookings %}
+        {% set latest_booking = bookings[-1] %}
+        <div class="booking-card text-start">
+          <h3>Latest Booking: {{ latest_booking.event_type }} 📸</h3>
+          <p><strong>Date:</strong> {{ latest_booking.booking_date }}</p>
+          <p><strong>Time:</strong> {{ latest_booking.booking_time }}</p>
+          <p><strong>Photographer:</strong> {{ latest_booking.photographer_name }}</p>
+          <p><strong>Status:</strong> {{ latest_booking.status }}</p>
+          <p><strong>Amount:</strong> ₹{{ latest_booking.price }}</p>
+        </div>
+      {% else %}
+        <p>No bookings found.</p>
+      {% endif %}
     </div>
 
     <a href="{{ url_for('dashboard') }}" class="back-btn">← Back to Dashboard</a>
