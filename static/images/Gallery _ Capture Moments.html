@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<!-- saved from url=(0029)http://127.0.0.1:5000/gallery -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <title>Gallery | Capture Moments</title>
+  <link href="./Gallery _ Capture Moments_files/bootstrap.min.css" rel="stylesheet">
+  <link href="./Gallery _ Capture Moments_files/css2" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(to right, #c18f8f, #76909e);
+      font-family: 'Quicksand', sans-serif;
+      padding: 40px 0;
+    }
+
+    h1 {
+      text-align: center;
+      font-weight: 700;
+      margin-bottom: 40px;
+      color: #4a148c;
+    }
+    h2 {
+      text-align: left;
+      font-weight: 500;
+      margin-bottom: 30px;
+      color: #6a1b9a;
+    }
+
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* 3 columns */
+      gap: 30px;
+      max-width: 1100px;
+      margin: auto;
+      padding: 0 20px;
+    }
+
+    .category-card {
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: 0.3s ease;
+      text-align: center;
+    }
+
+    .category-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    .category-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .category-card h5 {
+      margin: 15px 0;
+      font-size: 1.25rem;
+      color: #6a1b9a;
+      font-weight: bold;
+    }
+
+    .category-card a {
+      display: inline-block;
+      margin-bottom: 15px;
+      padding: 8px 20px;
+      border-radius: 20px;
+      background: #8e24aa;
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    .category-card a:hover {
+      background-color: #6a0080;
+    }
+
+    .back-link {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .back-link a {
+      color: #7b1fa2;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .back-link a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .category-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
+      }
+    }
+
+    @media (max-width: 576px) {
+      .category-grid {
+        grid-template-columns: 1fr; /* 1 column on mobile */
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>My Photography</h1>
+<h2>Gallery</h2>
+  <div class="category-grid">
+
+    <!-- Wedding -->
+    <div class="category-card">
+      <img src="./Gallery _ Capture Moments_files/wedding.jpg" alt="Wedding">
+      <h5>Wedding</h5>
+    </div>
+     <div class="category-card">
+      <img src="./Gallery _ Capture Moments_files/wedding.jpg" alt="Wedding">
+      <h5>Wedding</h5>
+    </div>
+ <div class="category-card">
+      <img src="./Gallery _ Capture Moments_files/wedding.jpg" alt="Wedding">
+      <h5>Wedding</h5>
+    </div>
+ <div class="category-card">
+      <img src="./Gallery _ Capture Moments_files/wedding.jpg" alt="Wedding">
+      <h5>Wedding</h5>
+    </div>
+
+    <!-- Birthday -->
+    <div class="category-card">
+      <img src="./Gallery _ Capture Moments_files/birthday.jpg" alt="Birthday">
+      <h5>Birthday</h5>
+    </div>
+
+    <!-- Wildlife -->
+    <div class="category-card">
+      <img src="./Gallery _ Capture Moments_files/wildlife.jpg" alt="Wildlife">
+      <h5>Wildlife</h5>
+    </div>
+
+    <!-- Adventure -->
+    <div class="category-card">
+      <img src="./Gallery _ Capture Moments_files/adventure.jpg" alt="Adventure">
+      <h5>Adventure</h5>
+    </div>
+
+    <!-- Tours -->
+    <div class="category-card">
+      <img src="./Gallery _ Capture Moments_files/tours.jpg" alt="Tours">
+      <h5>Tours</h5>
+    </div>
+
+    <!-- Events -->
+    <div class="category-card">
+      <img src="./Gallery _ Capture Moments_files/events.jpg" alt="Events">
+      <h5>Events</h5>
+    </div>
+
+  </div>
+
+  <div class="back-link">
+    <a href="http://127.0.0.1:5000/dashboard">← Back to Dashboard</a>
+  </div>
+
+
+</body></html>
