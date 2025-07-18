@@ -63,10 +63,6 @@ gallery_images = [
 
 @app.route('/')
 def index():
-    """
-    Renders the initial landing page (index.html).
-    This is the first page visitors see.
-    """
     return render_template('MultipleFiles/index.html')
 
 @app.route('/home')
